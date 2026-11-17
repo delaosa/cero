@@ -1,0 +1,14 @@
+[Desktop Entry]
+Type=Application
+Name=CERO
+GenericName=Music Assistant Player
+Comment=CERO Electron, Reproduce Only - Native Music Assistant player
+Exec=run.sh
+Icon=xyz.delaosa.CERO
+Terminal=false
+Categories=AudioVideo;Audio;Music;Player;GTK;
+Keywords=music;assistant;player;mpris;playerctl;sendspin;
+StartupNotify=true
+StartupWMClass=xyz.delaosa.CERO
+SingleMainWindow=true
+# Template only: run scripts/install-launcher.sh to install a launcher with absolute paths.

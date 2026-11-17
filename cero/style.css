@@ -1,0 +1,910 @@
+/* CERO - Native GTK4 Dark Slate & Cobalt look */
+
+window,
+window.csd,
+window.background,
+.cero-root {
+  background-color: #0d1117;
+  color: #f0f4f8;
+  border: none;
+  outline: none;
+  outline-width: 0;
+  box-shadow: none;
+}
+
+/* Top bar */
+.cero-topbar {
+  background-color: #0d1117;
+  padding: 8px 12px 4px 12px;
+  min-height: 50px;
+}
+
+.nav-circle-btn {
+  background-color: #161b22;
+  color: #9fb0c7;
+  border-radius: 999px;
+  min-width: 34px;
+  min-height: 34px;
+  padding: 0;
+  border: none;
+  box-shadow: none;
+}
+
+.nav-circle-btn:hover:not(:disabled) {
+  background-color: #212834;
+  color: #ffffff;
+}
+
+.nav-circle-btn:disabled {
+  opacity: 0.42;
+}
+
+.status-pill {
+  background-color: #161b22;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+  padding: 4px 11px;
+  min-height: 26px;
+}
+
+.status-pill-label {
+  color: #9fb0c7;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status-pill.online .status-pill-label {
+  color: #f0f4f8;
+}
+
+.status-dot {
+  min-width: 7px;
+  min-height: 7px;
+  border-radius: 999px;
+  background-color: #f59e0b;
+}
+
+.status-pill.online .status-dot {
+  background-color: #94A3B8;
+}
+
+.status-pill.offline .status-dot {
+  background-color: #ef4444;
+}
+
+.search-pill {
+  background-color: #161b22;
+  color: #f0f4f8;
+  border-radius: 999px;
+  border: 1.5px solid rgba(255, 255, 255, 0.07);
+  padding: 4px 14px;
+  min-height: 40px;
+}
+
+.search-pill:focus-within {
+  background-color: #1c222d;
+  border-color: #94A3B8;
+}
+
+.search-pill entry,
+.search-pill entry:focus,
+.search-pill entry:focus-within,
+.search-pill text,
+.search-pill text:focus {
+  background: transparent;
+  background-color: transparent;
+  color: #f0f4f8;
+  border: none;
+  outline: none;
+  outline-width: 0;
+  outline-color: transparent;
+  box-shadow: none;
+  font-size: 14px;
+}
+
+/* Floating panels */
+.cero-island {
+  background-color: #141922;
+  border-radius: 10px;
+}
+
+.cero-center-island {
+  background-image: linear-gradient(180deg, #1b2230 0px, #141922 260px);
+  background-color: #141922;
+  border-radius: 10px;
+}
+
+/* Filter chips */
+.filter-chip {
+  background-color: #212836;
+  color: #e2e8f0;
+  border-radius: 999px;
+  padding: 5px 13px;
+  min-height: 30px;
+  font-size: 13px;
+  font-weight: 600;
+  border: none;
+  box-shadow: none;
+}
+
+.filter-chip:hover {
+  background-color: #2c3547;
+}
+
+.filter-chip.active {
+  background-color: #64748B;
+  color: #ffffff;
+}
+
+.filter-chip-compact {
+  background-color: #212836;
+  color: #e2e8f0;
+  border-radius: 999px;
+  padding: 3px 6px;
+  min-height: 26px;
+  min-width: 0;
+  font-size: 12px;
+  font-weight: 600;
+  border: none;
+  box-shadow: none;
+}
+
+.filter-chip-compact:hover {
+  background-color: #2c3547;
+}
+
+.filter-chip-compact.active {
+  background-color: #64748B;
+  color: #ffffff;
+}
+
+/* Adjustable dividers between panels */
+.panels-paned > separator {
+  min-width: 8px;
+  min-height: 8px;
+  background-color: transparent;
+  background-image: none;
+  border: none;
+  box-shadow: none;
+  outline: none;
+}
+
+.panels-paned > separator:hover,
+.panels-paned > separator:active {
+  background-image: linear-gradient(
+    180deg,
+    transparent 20%,
+    rgba(148, 163, 184, 0.72) 50%,
+    transparent 80%
+  );
+}
+
+/* Quick-play overlay on the cover in Library */
+.lib-cover-play-overlay {
+  background-color: rgba(13, 17, 23, 0.65);
+  border-radius: 6px;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0;
+  border: none;
+  box-shadow: none;
+  opacity: 0;
+  transition: opacity 130ms ease;
+}
+
+.library-row:hover .lib-cover-play-overlay,
+.lib-cover-play-overlay:hover {
+  opacity: 1;
+}
+
+/* Library panel rows */
+.lib-collapse-btn {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  border-radius: 8px;
+  padding: 4px 6px;
+  min-height: 28px;
+  min-width: 28px;
+}
+
+.lib-collapse-btn:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.library-row {
+  background: transparent;
+  border-radius: 8px;
+  padding: 7px 8px;
+}
+
+.library-row.collapsed {
+  padding: 6px 4px;
+}
+
+.library-row:hover {
+  background-color: #1e2532;
+}
+
+.library-row.selected {
+  background-color: #273042;
+}
+
+menubutton.sort-pill-btn {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+}
+
+menubutton.sort-pill-btn > button {
+  background-color: #212836;
+  color: #e2e8f0;
+  border-radius: 999px;
+  padding: 2px 10px;
+  min-height: 26px;
+  min-width: 0;
+  border: none;
+  box-shadow: none;
+}
+
+menubutton.sort-pill-btn > button:hover {
+  background-color: #2c3547;
+}
+
+.sort-dir-btn {
+  background-color: #212836;
+  border-radius: 999px;
+  min-width: 26px;
+  min-height: 26px;
+  padding: 0;
+  border: none;
+  box-shadow: none;
+}
+
+.sort-dir-btn:hover {
+  background-color: #2c3547;
+}
+
+.lib-filter-box {
+  background-color: #1b222e;
+  border-radius: 999px;
+  padding: 2px 10px;
+  min-height: 30px;
+}
+
+.lib-filter-box:focus-within {
+  background-color: #232b3a;
+}
+
+.lib-filter-box entry,
+.lib-filter-box entry:focus,
+.lib-filter-box entry:focus-within,
+.lib-filter-box text,
+.lib-filter-box text:focus {
+  background: transparent;
+  background-color: transparent;
+  color: #f0f4f8;
+  border: none;
+  outline: none;
+  outline-width: 0;
+  outline-color: transparent;
+  box-shadow: none;
+  font-size: 13px;
+}
+
+.card-lib-btn {
+  background-color: rgba(20, 25, 34, 0.82);
+  border-radius: 999px;
+  min-width: 28px;
+  min-height: 28px;
+  padding: 0;
+  border: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  opacity: 0.92;
+}
+
+.card-lib-btn:hover {
+  background-color: rgba(30, 38, 52, 0.96);
+  opacity: 1;
+}
+
+.artwork-lightbox {
+  background-color: rgba(9, 12, 17, 0.86);
+}
+
+.artwork-lightbox-card {
+  background-color: #161c26;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.78);
+}
+
+/* Album / playlist / artist cards */
+.media-card {
+  background-color: #1a202c;
+  border-radius: 8px;
+  padding: 10px;
+  transition: background-color 150ms ease;
+}
+
+/* Compact text under the cover: the image gets the space */
+.media-card .track-title {
+  font-size: 13px;
+}
+
+.media-card .subtitle-dim {
+  font-size: 12px;
+}
+
+.media-card:hover {
+  background-color: #242c3d;
+}
+
+.card-lib-badge {
+  background-color: #475569;
+  border-radius: 999px;
+  padding: 3px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.55);
+}
+
+.card-cover {
+  border-radius: 6px;
+}
+
+.card-cover-circle {
+  border-radius: 999px;
+}
+
+.card-play-fab {
+  background-color: #64748B;
+  color: #ffffff;
+  border-radius: 999px;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0;
+  border: none;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.55);
+  opacity: 0;
+  transition: opacity 150ms ease, transform 150ms ease;
+}
+
+.media-card:hover .card-play-fab {
+  opacity: 1;
+}
+
+.card-play-fab:hover {
+  background-color: #CBD5E1;
+}
+
+/* Compact cards */
+.quick-pick-card {
+  background-color: rgba(255, 255, 255, 0.06);
+  border-radius: 6px;
+  padding: 0 12px 0 0;
+  min-height: 56px;
+  transition: background-color 140ms ease;
+}
+
+.quick-pick-card:hover {
+  background-color: rgba(255, 255, 255, 0.13);
+}
+
+/* Track table */
+.track-table-header {
+  padding: 4px 12px 8px 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  margin-bottom: 4px;
+}
+
+.track-table-header label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+}
+
+.track-row {
+  background: transparent;
+  border-radius: 6px;
+  padding: 7px 12px;
+}
+
+.track-album-btn {
+  padding: 2px 0;
+  min-width: 0;
+}
+
+.track-row:hover {
+  background-color: rgba(255, 255, 255, 0.07);
+}
+
+.track-row.playing {
+  background-color: rgba(148, 163, 184, 0.16);
+}
+
+.track-row.playing:hover {
+  background-color: rgba(148, 163, 184, 0.22);
+}
+
+.track-row-play-btn {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  min-width: 26px;
+  min-height: 26px;
+  opacity: 0;
+}
+
+.track-row:hover .track-row-play-btn,
+.track-row-play-btn:hover {
+  opacity: 1;
+}
+
+.track-row:hover .track-num-lbl {
+  opacity: 0;
+}
+
+.track-row.playing .track-title {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.track-row.playing .device-active-label {
+  color: #ffffff;
+  font-weight: 800;
+}
+
+.track-row.dragging-row {
+  opacity: 0.45;
+}
+
+.track-row.drop-above {
+  box-shadow: inset 0 2px 0 0 #94A3B8;
+}
+
+.track-row.drop-below {
+  box-shadow: inset 0 -2px 0 0 #94A3B8;
+}
+
+.row-drag-grip {
+  opacity: 0.35;
+}
+
+.track-row:hover .row-drag-grip {
+  opacity: 0.9;
+}
+
+.track-title {
+  color: #f0f4f8;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.subtitle-dim {
+  color: #9fb0c7;
+  font-size: 13px;
+}
+
+.artist-link-btn {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  min-height: 0;
+  min-width: 0;
+  color: #e2e8f0;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.artist-link-btn:hover {
+  color: #CBD5E1;
+  text-decoration: underline;
+}
+
+.muted-label {
+  color: #8b9bb0;
+  font-size: 12px;
+}
+
+.section-heading {
+  color: #f0f4f8;
+  font-size: 21px;
+  font-weight: 800;
+  letter-spacing: -0.3px;
+}
+
+.hero-title {
+  color: #ffffff;
+  font-size: 34px;
+  font-weight: 900;
+  letter-spacing: -0.8px;
+}
+
+.hero-type {
+  color: #CBD5E1;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+}
+
+/* CERO accent primary buttons */
+.cero-accent-btn {
+  background-color: #64748B;
+  color: #ffffff;
+  border-radius: 999px;
+  font-weight: 700;
+  padding: 8px 22px;
+  border: none;
+  box-shadow: none;
+}
+
+.cero-accent-btn:hover:not(:disabled) {
+  background-color: #CBD5E1;
+}
+
+.cero-accent-fab {
+  background-color: #64748B;
+  color: #ffffff;
+  border-radius: 999px;
+  min-width: 52px;
+  min-height: 52px;
+  padding: 0;
+  border: none;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.45);
+}
+
+.cero-accent-fab:hover {
+  background-color: #CBD5E1;
+}
+
+/* Bottom player bar (Now Playing Bar) */
+.player-bar {
+  background-color: #0d1117;
+  padding: 9px 16px;
+  min-height: 86px;
+}
+
+.play-circle-btn {
+  background-color: #f0f4f8;
+  color: #0d1117;
+  border-radius: 999px;
+  min-width: 32px;
+  min-height: 32px;
+  padding: 0;
+  border: none;
+  box-shadow: none;
+}
+
+.play-circle-btn:hover {
+  background-color: #94A3B8;
+  color: #ffffff;
+}
+
+.play-circle-btn:disabled {
+  opacity: 0.45;
+}
+
+.play-circle-btn.is-pending,
+.play-circle-btn.is-pending:disabled {
+  background-color: #cbd5e1;
+  opacity: 1;
+}
+
+.icon-flat-btn:disabled {
+  opacity: 0.35;
+}
+
+/* Larger player bar elements without changing its height */
+.player-bar .play-circle-btn {
+  min-width: 38px;
+  min-height: 38px;
+}
+
+.player-bar .icon-flat-btn {
+  min-width: 32px;
+  min-height: 32px;
+}
+
+.player-bar menubutton.icon-flat-btn > button {
+  min-width: 32px;
+  min-height: 32px;
+}
+
+.player-bar menubutton.device-selector-btn > button {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  border-radius: 999px;
+  padding: 4px 6px;
+  min-height: 28px;
+}
+
+.player-bar menubutton.device-selector-btn > button:hover,
+.player-bar menubutton.device-selector-btn > button:checked {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.device-selector-label {
+  color: #8b9bb4;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.device-selector-label.remote {
+  color: #cbd5e1;
+}
+
+.player-bar .track-title {
+  font-size: 15px;
+}
+
+.player-bar .subtitle-dim {
+  font-size: 14px;
+}
+
+.player-bar .muted-label {
+  font-size: 13px;
+}
+
+/* "Artist • Album" links: same color as the text, underlined only on hover */
+.player-sub-links link {
+  color: #9fb0c7;
+  text-decoration: none;
+}
+
+.player-sub-links link:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.icon-flat-btn {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  border-radius: 999px;
+  min-width: 28px;
+  min-height: 28px;
+  padding: 3px;
+  opacity: 0.78;
+}
+
+.icon-flat-btn:hover {
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+menubutton.icon-flat-btn {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  min-height: 28px;
+  min-width: 28px;
+}
+
+menubutton.icon-flat-btn > button {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  border-radius: 999px;
+  min-width: 28px;
+  min-height: 28px;
+  padding: 3px;
+  opacity: 0.78;
+}
+
+menubutton.icon-flat-btn > button:hover {
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.icon-flat-btn.active {
+  opacity: 1;
+}
+
+/* Sliders (progress and volume) */
+.cero-scale {
+  padding: 2px 0;
+  margin: 0;
+  min-height: 16px;
+}
+
+.cero-scale trough {
+  min-height: 4px;
+  border-radius: 999px;
+  background-color: #364152;
+}
+
+.cero-scale highlight {
+  min-height: 4px;
+  border-radius: 999px;
+  background-color: #9fb0c7;
+}
+
+.cero-scale:hover highlight {
+  background-color: #94A3B8;
+}
+
+.cero-scale slider {
+  min-width: 12px;
+  min-height: 12px;
+  margin: -4px;
+  border-radius: 999px;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.cero-scale:hover slider {
+  background-color: #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+/* Active device indicator */
+.connect-banner {
+  background-color: #94A3B8;
+  color: #ffffff;
+  border-radius: 6px;
+  padding: 4px 12px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.device-row {
+  background: transparent;
+  border-radius: 8px;
+  padding: 8px 10px;
+}
+
+.device-row:hover {
+  background-color: #212836;
+}
+
+.device-row.active-device {
+  background-color: rgba(148, 163, 184, 0.16);
+}
+
+.device-row.local-device {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.device-row.local-device.active-device {
+  background-color: rgba(148, 163, 184, 0.18);
+  border: 1px solid rgba(148, 163, 184, 0.45);
+}
+
+.local-device-badge {
+  background-color: rgba(255, 255, 255, 0.14);
+  color: #ffffff;
+  border-radius: 999px;
+  padding: 1px 7px;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.device-active-label {
+  color: #CBD5E1;
+  font-weight: 700;
+}
+
+/* Music Assistant-style audio quality indicator (color dot + LQ / SQ / HQ / HR text) */
+.quality-badge-icon {
+  background: transparent;
+  border: none;
+  border-radius: 6px;
+  padding: 0 5px;
+  min-height: 20px;
+  min-width: 0;
+  box-shadow: none;
+}
+
+.quality-badge-icon:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.quality-dot {
+  min-width: 8px;
+  min-height: 8px;
+  border-radius: 999px;
+}
+
+.quality-tier-text {
+  color: #cbd5e1;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+}
+
+.quality-tier-pill {
+  border-radius: 4px;
+  padding: 1px 5px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+  color: #090d12;
+}
+
+/* Tiers go from bright to dim in the accent's slate tones instead of their own colors */
+.quality-tier-hr {
+  background-color: #f1f5f9;
+}
+
+.quality-tier-hq {
+  background-color: #cbd5e1;
+}
+
+.quality-tier-sq {
+  background-color: #94a3b8;
+}
+
+.quality-tier-lq {
+  background-color: #64748b;
+}
+
+
+
+.tech-section-card {
+  background-color: #161b24;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 12px 14px;
+}
+
+
+/* Clean initial Login screen */
+.login-card {
+  background-color: #141922;
+  border-radius: 14px;
+  padding: 36px 40px;
+  border: 1px solid #263042;
+}
+
+.login-entry {
+  background-color: #1b222e;
+  color: #f0f4f8;
+  border: 1px solid #334155;
+  border-radius: 6px;
+  padding: 8px 12px;
+  min-height: 40px;
+}
+
+.login-entry:focus {
+  border-color: #94A3B8;
+}
+
+.error-banner {
+  background-color: rgba(239, 68, 68, 0.18);
+  color: #fca5a5;
+  border: 1px solid rgba(239, 68, 68, 0.45);
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 13px;
+}
+
+.ctx-menu-btn {
+  border-radius: 6px;
+  padding: 6px 10px;
+}
+
+.ctx-menu-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+popover.background > contents {
+  background-color: #1c222e;
+  color: #f0f4f8;
+  border: 1px solid #2e384b;
+  border-radius: 10px;
+  padding: 8px;
+}
+
+list,
+listview,
+flowbox,
+flowboxchild {
+  background: transparent;
+}

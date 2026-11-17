@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+
+# Packaging artifacts (AUR / makepkg)
+pkg/
+src/
+*.pkg.tar.*
+
+# Editors / OS
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# Maintainer-only AUR publishing script
+scripts/publish-aur.sh
