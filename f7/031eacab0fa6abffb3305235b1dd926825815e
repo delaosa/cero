@@ -1,0 +1,66 @@
+cero/ui/main_window.py
+  h_ce3d10d71229de 1-2299
+cero/ui/login_view.py
+  h_ce3d10d71229de 1-212
+run.sh
+  h_ce3d10d71229de 1-4
+README.md
+  h_ce3d10d71229de 1-264
+tests/verify_all.py
+  h_ce3d10d71229de 1-751,753-791,798-799,801-803,806-807,809-810,823-838,851,853,904-939
+  h_ce3d10d71229de 752,792-797,800,804-805,808,811-822,839-850,852,854-903
+cero/ui/__init__.py
+  h_ce3d10d71229de 1
+cero/ui/widgets.py
+  h_ce3d10d71229de 1-1105
+cero/style.css
+  h_ce3d10d71229de 1-820
+.gitignore
+  h_ce3d10d71229de 1-19
+cero/__main__.py
+  h_ce3d10d71229de 1-29
+cero.svg
+  h_ce3d10d71229de 1-15
+cero/icons.py
+  h_ce3d10d71229de 1-96
+cero.desktop
+  h_ce3d10d71229de 1-14
+cero/mpris.py
+  h_ce3d10d71229de 1-449
+cero/ma_service.py
+  h_ce3d10d71229de 1-206,209-1108,1116,1119-1123,1164-1180,1188,1190-1191,1194-1216,1219-1785
+  h_ce3d10d71229de 207-208,1109-1115,1117-1118,1124-1163,1181-1187,1189,1192-1193,1217-1218
+cero/ui/player_bar.py
+  h_ce3d10d71229de 1-746
+LICENSE
+  h_ce3d10d71229de 1-21
+pyproject.toml
+  h_ce3d10d71229de 1-42
+cero/artwork.py
+  h_ce3d10d71229de 1-272
+cero/sendspin_player.py
+  h_ce3d10d71229de 1-507
+cero/async_runner.py
+  h_ce3d10d71229de 1-89
+cero/ui/app.py
+  h_ce3d10d71229de 1-101
+cero/ui/queue_panel.py
+  h_ce3d10d71229de 1-311
+cero/session.py
+  h_ce3d10d71229de 1-297
+cero/__init__.py
+  h_ce3d10d71229de 1-5
+install-launcher.sh
+  h_ce3d10d71229de 1-56
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.6",
+  "base_commit_sha": "f7031eacab0fa6abffb3305235b1dd926825815e",
+  "prompts": {},
+  "humans": {
+    "h_ce3d10d71229de": {
+      "author": "delaosa <delaosa@gmail.com>"
+    }
+  }
+}
