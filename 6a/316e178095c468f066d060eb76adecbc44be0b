@@ -1,0 +1,83 @@
+cero/artwork.py
+  h_ce3d10d71229de 1-272
+cero/__main__.py
+  h_ce3d10d71229de 1-29
+cero/ui/queue_panel.py
+  h_ce3d10d71229de 1-311
+cero/session.py
+  h_ce3d10d71229de 1-297
+cero/ui/player_bar.py
+  h_ce3d10d71229de 1-382,451,453-468,470-481,483,485-489,491-499,501-506,509-511,513-535,537-548,550,553-745
+  s_62812e67f2b98b::t_a268f928fb1378 383-450,452,469,482,484,490,500,507-508,512,536,549,551-552
+cero/sendspin_player.py
+  h_ce3d10d71229de 1-507
+.gitignore
+  h_ce3d10d71229de 1-19
+  s_62812e67f2b98b::t_a083d77890c860 20-22
+cero/style.css
+  h_ce3d10d71229de 1-804
+cero/ui/__init__.py
+  h_ce3d10d71229de 1
+packaging/aur/cero.desktop
+  s_62812e67f2b98b::t_d2b945754ee0c6 1-10
+cero/ui/widgets.py
+  h_ce3d10d71229de 1-1105
+tests/verify_all.py
+  h_ce3d10d71229de 1-952
+cero/icons.py
+  h_ce3d10d71229de 1-96
+cero.svg
+  h_ce3d10d71229de 1-15
+cero/ui/main_window.py
+  h_ce3d10d71229de 1-2346
+cero/ma_service.py
+  h_ce3d10d71229de 1-1785
+scripts/local-install.sh
+  s_62812e67f2b98b::t_4832893985b325 1-32
+packaging/aur/PKGBUILD
+  h_ce3d10d71229de 1-56
+packaging/aur/cero.sh
+  s_62812e67f2b98b::t_09f42425389ee5 1-7
+cero/async_runner.py
+  h_ce3d10d71229de 1-89
+cero/ui/app.py
+  s_62812e67f2b98b::t_dd5a2f47ebb6ca 23-31,33,77-82
+  h_ce3d10d71229de 1-22,32,34-76,83-117
+cero/ui/login_view.py
+  h_ce3d10d71229de 1-212
+LICENSE
+  h_ce3d10d71229de 1-21
+pyproject.toml
+  h_ce3d10d71229de 1-42
+cero.desktop
+  h_ce3d10d71229de 1-14
+cero/mpris.py
+  h_ce3d10d71229de 1-449
+cero/__init__.py
+  h_ce3d10d71229de 1-5
+run.sh
+  h_ce3d10d71229de 1-4
+README.md
+  h_ce3d10d71229de 1-264
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.6",
+  "base_commit_sha": "6a316e178095c468f066d060eb76adecbc44be0b",
+  "prompts": {},
+  "humans": {
+    "h_ce3d10d71229de": {
+      "author": "delaosa <delaosa@gmail.com>"
+    }
+  },
+  "sessions": {
+    "s_62812e67f2b98b": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_e1acb4253ffek08Fl8mCet1GMw",
+        "model": "claude-opus-5.5"
+      },
+      "human_author": "delaosa <delaosa@gmail.com>"
+    }
+  }
+}
