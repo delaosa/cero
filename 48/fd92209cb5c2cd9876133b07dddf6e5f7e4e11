@@ -1,0 +1,19 @@
+.gitignore
+  s_62812e67f2b98b::t_d1d7d7595011d1 23
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.6",
+  "base_commit_sha": "48fd92209cb5c2cd9876133b07dddf6e5f7e4e11",
+  "prompts": {},
+  "sessions": {
+    "s_62812e67f2b98b": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_e1acb4253ffek08Fl8mCet1GMw",
+        "model": "claude-sonnet-5.5"
+      },
+      "human_author": "delaosa <delaosa@gmail.com>"
+    }
+  }
+}
