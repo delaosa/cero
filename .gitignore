@@ -20,3 +20,4 @@ src/
 
 # Maintainer-only AUR publishing script
 scripts/publish-aur.sh
+packaging/aur/.SRCINFO
