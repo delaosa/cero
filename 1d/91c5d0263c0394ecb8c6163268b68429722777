@@ -1,0 +1,21 @@
+cero/ui/main_window.py
+  s_62812e67f2b98b::t_cd39f5db700259 16,33,2760-2761,2763
+cero/ui/widgets.py
+  s_62812e67f2b98b::t_a4a6802601ac99 1083-1108,1123
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.6",
+  "base_commit_sha": "1d91c5d0263c0394ecb8c6163268b68429722777",
+  "prompts": {},
+  "sessions": {
+    "s_62812e67f2b98b": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_e1acb4253ffek08Fl8mCet1GMw",
+        "model": "claude-sonnet-5.5"
+      },
+      "human_author": "delaosa <delaosa@gmail.com>"
+    }
+  }
+}
