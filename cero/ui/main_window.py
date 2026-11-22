@@ -13,7 +13,7 @@ import gi
 gi.require_version("Gtk", "4.0")
 gi.require_version("Adw", "1")
 from gi.repository import Adw, Gdk, GLib, Gtk, Pango
-from music_assistant_models.enums import AlbumType, MediaType, PlaybackState, QueueOption
+from music_assistant_models.enums import MediaType, PlaybackState, QueueOption
 from music_assistant_models.media_items import SearchResults
 
 from ..artwork import ArtworkLoader
@@ -30,6 +30,7 @@ from .widgets import (
     QuickPickCard,
     TrackRow,
     attach_media_context_menu,
+    album_type_label,
     is_video_album,
     make_cover_frame,
     make_library_toggle_button,
@@ -2756,11 +2757,10 @@ class MainWindow(Adw.ApplicationWindow):
             eps: list[Any] = []
             singles: list[Any] = []
             for a in detail.albums:
-                at = getattr(a, "album_type", None)
-                nm = (getattr(a, "name", "") or "").strip()
-                if at == AlbumType.EP or (at != AlbumType.SINGLE and nm.endswith(" - EP")):
+                kind = album_type_label(a)
+                if kind == "EP":
                     eps.append(a)
-                elif at == AlbumType.SINGLE or nm.endswith(" - Single"):
+                elif kind == "Single":
                     singles.append(a)
                 else:
                     albums.append(a)

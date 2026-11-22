@@ -1080,6 +1080,32 @@ def is_video_album(item: Any) -> bool:
     return name.endswith((" - Video Album", " (Video Album)"))
 
 
+def _album_type_from_hints(album: Any) -> str:
+    """Album type label from the explicit type, or from the version / provider URL when the type is generic."""
+    at = getattr(album, "album_type", None)
+    label = _ALBUM_TYPE_LABELS.get(at, "") if at is not None else ""
+    if label and at != AlbumType.ALBUM:
+        return label
+    version = (getattr(album, "version", "") or "").strip().casefold()
+    for lab in ("Single", "EP", "Live", "Soundtrack", "Compilation"):
+        if version == lab.casefold():
+            return lab
+    for pm in getattr(album, "provider_mappings", None) or ():
+        url = str(getattr(pm, "url", "") or "").casefold().split("?")[0]
+        if "music.apple.com" in url:
+            slug = url.rstrip("/").rsplit("/", 2)[-2] if url.count("/") >= 2 else ""
+            if slug.endswith("-single"):
+                return "Single"
+            if slug.endswith("-ep"):
+                return "EP"
+    return label
+
+
+def album_type_label(album: Any) -> str:
+    """Display type of an album ('Album', 'Single', 'EP', ...)."""
+    return split_album_name_and_type(album)[1]
+
+
 def split_album_name_and_type(album: Any) -> tuple[str, str]:
     """Splits an album's display name from its type (e.g. 'Culito - EP' -> ('Culito', 'EP'))."""
     if album is None:
@@ -1094,8 +1120,7 @@ def split_album_name_and_type(album: Any) -> tuple[str, str]:
             detected = label
             break
     if not detected:
-        at = getattr(album, "album_type", None)
-        detected = _ALBUM_TYPE_LABELS.get(at, "") if at is not None else ""
+        detected = _album_type_from_hints(album)
     return name, detected or "Album"
 
 
