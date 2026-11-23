@@ -1,0 +1,29 @@
+cero/__init__.py
+  s_62812e67f2b98b::t_2ff44861a346e4 5
+cero/__main__.py
+  s_62812e67f2b98b::t_588e41d8062b49 5,12,17-19,29
+cero/ui/login_view.py
+  s_62812e67f2b98b::t_a17e0da2f1d9af 12,44-46
+cero/ui/main_window.py
+  s_62812e67f2b98b::t_c47a3176ca7518 19,1263,1266
+packaging/aur/PKGBUILD
+  s_62812e67f2b98b::t_cd891f7d735f4c 3-4
+pyproject.toml
+  s_62812e67f2b98b::t_01ae44aa751b63 7
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.6",
+  "base_commit_sha": "5693e49ccaed96e1c97442ec81d1e96a447c9c14",
+  "prompts": {},
+  "sessions": {
+    "s_62812e67f2b98b": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_e1acb4253ffek08Fl8mCet1GMw",
+        "model": "claude-sonnet-5.5"
+      },
+      "human_author": "delaosa <delaosa@gmail.com>"
+    }
+  }
+}
